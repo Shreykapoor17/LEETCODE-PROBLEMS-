@@ -12,7 +12,7 @@ public:
 
                 if (s[i] == s[j]) {
 
-                    // Length 1 or length 2
+                    
                     if (j - i <= 1) {
                         pal[i][j] = true;
                     }
