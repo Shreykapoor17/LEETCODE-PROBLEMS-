@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    int depth = 0;
+    int maxDepth = 0;
+
+    for (char c : s) {
+        if (c == '(') {
+            depth++;
+            maxDepth = max(maxDepth, depth);
+        }
+        else if (c == ')') {
+            depth--;
+        }
+    }
+
+    cout << maxDepth << endl;
+
+    return 0;
+}
